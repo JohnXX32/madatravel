@@ -20,8 +20,8 @@ class CreateLocationsTable extends Migration
             $table->unsignedBigInteger('id_produit'); // Colonne pour la clé étrangère
             $table->foreign('id_produit')->references('id')->on('produits');
             $table->float('quantite');
-            $table->timestamp('date_debut');
-            $table->timestamp('date_fin');
+            $table->date('date_debut');
+            $table->date('date_fin');
             $table->timestamps();
         });
     }

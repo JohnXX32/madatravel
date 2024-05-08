@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bdb8cd7e799a589a80a8b7a168f9136ed031fed73519675987ca2f15d74decd7"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "id": "384360f4-1dee-4acb-bb4f-47e6ab4812e5",
+      "name": "Wordpress",
+      "type": "n8n-nodes-base.wordpress",
+      "typeVersion": 1,
+      "position": [
+        2160,
+        440
+      ],
+      "credentials": {
+        "wordpressApi": {
+          "id": "bRr7DlXYgPMI2Dv0",
+          "name": "First-page.fr"
+        }
+      }
+    }
+  ],
+  "connections": {},
+  "pinData": {}
+}
+
+
+{
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "bdb8cd7e799a589a80a8b7a168f9136ed031fed73519675987ca2f15d74decd7"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "url": "=https://{{ $json.site }}/wp-json/wp/v2/posts",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "id": "5f34837e-9cbd-47c0-8a3f-54851f2a3f1c",
+      "name": "Get post",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1100,
+        460
+      ]
+    }
+  ],
+  "connections": {},
+  "pinData": {}
+}

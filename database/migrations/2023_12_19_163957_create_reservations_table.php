@@ -19,8 +19,8 @@ class CreateReservationsTable extends Migration
             $table->foreign('id_user')->references('id')->on('users');
             $table->unsignedBigInteger('id_activite_detail'); // Colonne pour la clé étrangère
             $table->foreign('id_activite_detail')->references('id')->on('activite_details');
-            $table->timestamp('date_debut');
-            $table->timestamp('date_fin');
+            $table->date('date_debut');
+            $table->date('date_fin');
             $table->timestamps();
         });
     }
